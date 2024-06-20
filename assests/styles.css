@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -14,13 +14,13 @@ body {
 header {
     background-color: #511515;
     color: #fff;
-    padding: 10px 0;
+    padding: 0px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 nav {
