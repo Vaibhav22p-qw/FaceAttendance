@@ -17,28 +17,30 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 900%;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 30px; 
+    padding: 20px;
 }
 
 .member {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 400px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 5px;
-    width: calc(50% - 20px); 
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Three members per row on desktop */
     text-align: center;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-
-
 
 .member img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .member h2 {
@@ -57,4 +59,16 @@ body {
 
 .member a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .member {
+        width: calc(50% - 20px); /* Two members per row on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .member {
+        width: calc(100% - 20px); /* One member per row on mobile */
+    }
 }
