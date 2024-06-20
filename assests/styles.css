@@ -55,14 +55,14 @@ h2 {
 }
 
 #videoElement {
-    width: 100%;
-    max-width: 100%;
-    height: 100px;
+    width: 20cm;
+    height: 10cm;
     display: block;
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 footer {
     background-color: #333;
