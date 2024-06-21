@@ -55,11 +55,11 @@ h2 {
 }
 
 #videoElement {
-    width: 10px;
-    height: 10px;
+    width: 100px;
+    height: 100px;
     display: block;
-    margin-top: 10px;
-    border-radius: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
