@@ -55,8 +55,8 @@ h2 {
 }
 
 #videoElement {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     display: block;
     margin-top: 10px;
     border-radius: 0px;
@@ -71,7 +71,7 @@ footer {
     padding: 0px 0;
     position: fixed;
     bottom: 0;
-    width: 0px;
+    width: 10px;
 }
 
 footer a {
