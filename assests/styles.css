@@ -68,10 +68,10 @@ footer {
     background-color: #d8b800;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 0px 0;
     position: fixed;
     bottom: 0;
-    width: 10px;
+    width: 0px;
 }
 
 footer a {
