@@ -55,8 +55,8 @@ h2 {
 }
 
 #videoElement {
-    width: 20cm;
-    height: 10cm;
+    width: 5cm;
+    height: 5cm;
     display: block;
     margin-top: 20px;
     border-radius: 5px;
@@ -71,13 +71,13 @@ footer {
     padding: 0px 0;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 10px;
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 footer a:hover {
