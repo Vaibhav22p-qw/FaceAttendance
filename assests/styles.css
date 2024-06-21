@@ -55,8 +55,8 @@ h2 {
 }
 
 #videoElement {
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: 30%;
     display: block;
     margin-top: 20px;
     border-radius: 20px;
