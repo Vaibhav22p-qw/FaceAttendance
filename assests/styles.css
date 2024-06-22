@@ -54,14 +54,43 @@ h2 {
     margin-top: 20px;
 }
 
+#videoElementContainer {
+    position: relative; /* Ensure the container is positioned relative for absolute positioning */
+    width: 100%;
+    text-align: center;
+}
+
 #videoElement {
-    width: 300px; 
-    height: 300px; 
+    width: 300px; /* Adjust width as per your requirement */
+    height: 300px; /* Adjust height as per your requirement */
     display: block;
-    margin: 0 auto; 
-    border-radius: 10px;
-    object-fit: cover; 
+    margin: 0 auto; /* Center the video element horizontally */
+    border-radius: 10px; /* Rounded corners for a more square-like appearance */
+    object-fit: cover; /* Ensure the video fills the container without stretching */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scanning-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px; /* Adjust thickness of the scanning line */
+    height: 100%;
+    background-color: red;
+    animation: scanning 2s linear infinite;
+    transform: translateX(-50%);
+}
+
+@keyframes scanning {
+    0% {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    50% {
+        transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-100%);
+    }
 }
 
 footer {
