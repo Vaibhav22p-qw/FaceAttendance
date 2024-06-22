@@ -22,24 +22,32 @@
     
     <script>
 
-        async function startVideo() {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                const videoElement = document.getElementById('videoElement');
-                if (videoElement) {
-                    videoElement.srcObject = stream;
-                }
-            } catch (err) {
-                console.error("Error accessing the webcam: ", err);
-            }
+    
+async function startVideo() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const videoElement = document.getElementById('videoElement');
+        if (videoElement) {
+            videoElement.srcObject = stream;
+            videoElement.addEventListener('loadedmetadata', () => {
+                const scanLine = document.createElement('div');
+                scanLine.classList.add('scan-line');
+                videoElement.parentElement.appendChild(scanLine);
+            });
         }
-        
-        startVideo();
+    } catch (err) {
+        console.error("Error accessing the webcam: ", err);
+    }
+}
+
+startVideo();
+
     </script>
     
     <footer>
-        <a href="member.html">Members</a>
-        <a href="about.html">About us</a>
+        <a href="member.html">>Members</a>
+        <br>
+        <a href="about.html">>About us</a>
     </footer>
 </body>
 </html>
