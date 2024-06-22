@@ -75,29 +75,6 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Red line animation for webcam */
-.scan-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: red;
-    animation: scan 4s linear infinite;
-}
-
-@keyframes scan {
-    0% {
-        transform: scaleX(0);
-    }
-    50% {
-        transform: scaleX(1);
-    }
-    100% {
-        transform: scaleX(0);
-    }
-}
-
 /* Footer styles */
 footer {
     background-color: #8B8000;
