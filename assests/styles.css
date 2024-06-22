@@ -46,9 +46,16 @@ nav a:hover {
     background-color: #555;
 }
 
+/* Main styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Section styles */
 .section {
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
@@ -59,18 +66,18 @@ h2 {
 }
 
 /* Video container styles */
-#videoElementContainer {
-    position: relative; /* Ensure the container is positioned relative for absolute positioning */
-    width: 100%;
+.video-container {
+    margin-top: 20px;
     text-align: center;
 }
 
 #videoElement {
-    width: 300px; /* Adjust width as per your requirement */
-    height: 300px; /* Adjust height as per your requirement */
+    width: 100%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto; /* Center the video element horizontally */
-    border-radius: 10px; /* Rounded corners for a more square-like appearance */
+    border-radius: 10px; /* Rounded corners */
     object-fit: cover; /* Ensure the video fills the container without stretching */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
