@@ -1,9 +1,11 @@
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -11,6 +13,7 @@ body {
     padding: 0;
 }
 
+/* Header styles */
 header {
     background-color: #511515;
     color: #fff;
@@ -43,6 +46,7 @@ nav a:hover {
     background-color: #555;
 }
 
+/* Section styles */
 .section {
     margin-top: 10px;
     background-color: #fff;
@@ -54,6 +58,7 @@ h2 {
     margin-top: 20px;
 }
 
+/* Video container styles */
 #videoElementContainer {
     position: relative; /* Ensure the container is positioned relative for absolute positioning */
     width: 100%;
@@ -69,6 +74,8 @@ h2 {
     object-fit: cover; /* Ensure the video fills the container without stretching */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Red line animation for webcam */
 .scan-line {
     position: absolute;
     top: 0;
@@ -91,7 +98,7 @@ h2 {
     }
 }
 
-
+/* Footer styles */
 footer {
     background-color: #8B8000;
     color: #fff;
