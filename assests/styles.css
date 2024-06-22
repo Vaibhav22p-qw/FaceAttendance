@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
-    padding: 0px;
+    padding: 0;
 }
 
 header {
@@ -55,11 +55,12 @@ h2 {
 }
 
 #videoElement {
-    width: 55%;
-    height: 55%;
+    width: 300px; 
+    height: 300px; 
     display: block;
-    margin-top: 0px;
-    border-radius: 200px;
+    margin: 0 auto; 
+    border-radius: 10px;
+    object-fit: cover; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -71,16 +72,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 footer a {
