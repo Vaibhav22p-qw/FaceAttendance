@@ -72,25 +72,25 @@ h2 {
 
 .scanning-line {
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px; /* Adjust thickness of the scanning line */
-    height: 100%;
+    top: -10px; /* Adjust to position above the video element */
+    left: 0;
+    right: 0;
+    height: 2px; /* Adjust thickness of the scanning line */
     background-color: red;
     animation: scanning 2s linear infinite;
-    transform: translateX(-50%);
 }
 
 @keyframes scanning {
-    0% {
-        transform: translateX(-50%) translateY(-100%);
+    0%, 100% {
+        transform: translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(100%);
+        transform: translateY(-10px); /* Adjust distance of scan */
     }
-    100% {
-        transform: translateX(-50%) translateY(-100%);
-    }
+}
+
+.scanning-line.bottom {
+    top: calc(100% - 10px); /* Adjust to position below the video element */
 }
 
 footer {
