@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[F.D.A.]</title>
-    <link rel="stylesheet" href="assests/styles.css">
+    <title>Face Detection Attendance System</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <header>
-        <h1>Face Detection Attendance</h1>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About us</a>
-            <a href="member.html">Members</a>
-            <a href="sign.html" class="signin-button">Sign In</a> 
-        </nav>
+        <div class="container">
+            <h1>Face Detection Attendance</h1>
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="members.html">Members</a>
+                <a href="signin.html" class="signin-button">Sign In</a>
+            </nav>
+        </div>
     </header>
-   <h2>Webcam</h2>
-    <video id="videoElement" autoplay playsinline></video>
-    
-    <script>
 
+    <main class="container">
+        <section id="webcam-section">
+            <h2>Webcam</h2>
+            <div class="video-container">
+                <video id="videoElement" autoplay playsinline></video>
+                <canvas id="overlayCanvas"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <a href="members.html">&gt; Members</a>
+                <a href="about.html">&gt; About Us</a>
+            </nav>
+            <p>&copy; 2024 Face Detection Attendance System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
         async function startVideo() {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -35,10 +54,5 @@
         
         startVideo();
     </script>
-    <footer>
-        <a href="member.html">>Members</a>
-        <br>
-        <a href="about.html">>About us</a>
-    </footer>
 </body>
 </html>
