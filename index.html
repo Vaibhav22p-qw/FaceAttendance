@@ -18,10 +18,25 @@
             <a href="sign.html" class="signin-button">Sign In</a> 
         </nav>
     </header>
-    <div>
-    <h2>Webcam</h2>
-    <video id="video" width="720" height="560" autoplay muted></video>
-    </div>
+   <h2>Webcam</h2>
+    <video id="videoElement" autoplay playsinline></video>
+    
+    <script>
+
+        async function startVideo() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const videoElement = document.getElementById('videoElement');
+                if (videoElement) {
+                    videoElement.srcObject = stream;
+                }
+            } catch (err) {
+                console.error("Error accessing the webcam: ", err);
+            }
+        }
+        
+        startVideo();
+    </script>
     <footer>
         <a href="member.html">>Members</a>
         <br>
