@@ -1,0 +1,134 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+class Employee {
+private:
+    string name;
+    int code;
+    string desi;
+    int exp;
+    int age;
+
+public:
+    Employee() = default;
+
+    void inputf() {
+        cout << "Enter Employee details:"<<endl;
+        cout << "Name: ";
+        cin >> name;
+        cout << "Employee ID: ";
+        cin >> code;
+        cout << "Designation: ";
+        cin >> desi;
+        cout << "Experience: ";
+        cin >> exp;
+        cout << "Age: ";
+        cin >> age;
+    }
+
+    void displayDetails() const {
+        cout << "Name: " << name <<endl;
+        cout << "Employee ID: " << code <<endl;
+        cout << "Designation: " << desi<<endl;
+        cout << "Experience: " << exp <<endl;
+        cout << "Age: " << age <<endl;
+    }
+
+    long int getCode() const {
+        return code;
+    }
+};
+
+class Manage {
+private:
+    vector<Employee> employees;
+
+public:
+    void buildTable() {
+        int num;
+        cout << "Enter the number of Entries required: ";
+        cin >> num;
+
+        if (num > 20) {
+            cout << "Maximum number of Entries is 20."<<endl;
+            num = 20;
+        }
+
+        for (int i = 0; i < num; i++) {
+            Employee emp;
+            emp.inputf();
+            employees.push_back(emp);
+        }
+    }
+
+    void insertEmployee() {
+        if (employees.size() < 20) {
+            Employee emp;
+            emp.inputf();
+            employees.push_back(emp);
+        } else {
+            cout << "Employee Table Full"<<endl;
+        }
+    }
+
+    void deleteEmployee() {
+        cout << "Enter the Employee ID to delete record: ";
+        long int code;
+        cin >> code;
+
+        for (auto it = employees.begin(); it != employees.end(); ++it) {
+            if (it->getCode() == code) {
+                employees.erase(it);
+                cout << "Record Deleted."<<endl;
+                break;
+            }
+        }
+    }
+
+    void searchEmployee() const {
+        cout << "Enter the Employee ID to search record: ";
+        long int code;
+        cin >> code;
+
+        for (const auto& emp : employees) {
+            if (emp.getCode() == code) {
+                emp.displayDetails();
+                break;
+            }
+        }
+    }
+
+};
+
+int main() {
+    Manage e1;
+ cout << "      UCER Employee Details "<<endl;
+        cout << "1. Build Table"<<endl;
+        cout << "2. Insert New Entry"<<endl;
+        cout << "3. Delete Entry"<<endl;
+        cout << "4. Search a Record"<<endl;
+
+        int opt;
+        cin >> opt;
+
+        switch (opt) {
+            case 1:
+                e1.buildTable();
+                break;
+            case 2:
+                e1.insertEmployee();
+                break;
+            case 3:
+                e1.deleteEmployee();
+                break;
+            case 4:
+                e1.searchEmployee();
+                break;
+            default:
+                cout << "Invalid Choice!"<<endl;
+                main();
+        }
+    return 0;
+}
