@@ -1,0 +1,67 @@
+// pointerToObject.cpp
+#include<iostream>
+
+using namespace std;
+
+//class definition
+class Item{
+	int code;
+	float price;
+
+public:
+	void setItem(int code, float price){
+		this->code = code;
+		this->price = price;
+	}
+
+	void printItem(void){
+		cout<<"code: "<<code<<endl;
+		cout<<"price: "<<price<<endl;
+	}
+};
+
+const int len = 3;
+
+int main(){
+
+	//object of type Item
+	Item i1;
+	Item *iPtr; //pointer to Item
+
+	iPtr = &i1; //passing object reference to iPtr
+
+	i1.setItem(10, 24);
+	iPtr->setItem(20, 35);
+
+	cout<<"iPtr = &i1: "<<endl;
+	iPtr->printItem();
+
+	//i1.printItem() OR
+	cout<<"(*iptr).printItem(): "<<endl;
+	(*iPtr).printItem();
+	//both are same statement
+
+	//here, new keyword is allocating 3 memory blocks, containg one object of type Item
+	iPtr = new Item[len];
+
+	// cout<<"iPtr = new Item[3]: "<<endl;
+	// iPtr->setItem(100,200);
+	// iPtr->printItem();
+
+	int code; float price;
+	for(int i=0; i<len; i++){
+		cout<<"Enter Code for "<<i+1<<" : "<<endl;
+		cin>>code;
+
+		cout<<"Enter Price for "<<i+1<<" : "<<endl;
+		cin>>price;
+
+		iPtr->setItem(code, price);
+		
+		cout<<"Item Object ["<<i+1<<"]: "<<endl;
+		iPtr->printItem();
+		iPtr++;
+	}
+
+	return 0;
+}
